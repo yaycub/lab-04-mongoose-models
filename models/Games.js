@@ -1,20 +1,25 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-  make: {
+  title: {
     type: String,
     required: true
   },
-  model: {
+  platform: {
     type: String,
     required: true
   },
-  year: {
+  publishedOn: {
     type: Number,
     required: true,
-    min: 1900,
+    min: 1970,
     max: 2019
+  },
+  players: {
+    type: Number,
+    required: true,
+    max: 16
   }
 });
 
-module.exports = mongoose.model('Cars', schema);
+module.exports = mongoose.model('Games', schema);

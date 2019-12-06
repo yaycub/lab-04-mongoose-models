@@ -1,20 +1,19 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-  make: {
+  title: {
     type: String,
     required: true
   },
-  model: {
-    type: String,
+  isFiction: {
+    type: Boolean,
     required: true
   },
-  year: {
+  pages: {
     type: Number,
     required: true,
-    min: 1900,
-    max: 2019
+    min: 0
   }
 });
 
-module.exports = mongoose.model('Cars', schema);
+module.exports = mongoose.model('Books', schema);

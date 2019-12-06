@@ -1,20 +1,20 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-  make: {
+  breed: {
     type: String,
     required: true
   },
-  model: {
-    type: String,
-    required: true
-  },
-  year: {
+  lives: {
     type: Number,
     required: true,
-    min: 1900,
-    max: 2019
+    min: 1,
+    max: 9
+  },
+  name: {
+    type: String,
+    required: true
   }
 });
 
-module.exports = mongoose.model('Cars', schema);
+module.exports = mongoose.model('Cats', schema);

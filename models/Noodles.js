@@ -1,20 +1,20 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-  make: {
+  name: {
     type: String,
     required: true
   },
-  model: {
-    type: String,
+  isAlDente: {
+    type: Boolean,
     required: true
   },
-  year: {
+  howMany: {
     type: Number,
     required: true,
-    min: 1900,
-    max: 2019
+    min: 50
   }
 });
 
-module.exports = mongoose.model('Cars', schema);
+
+module.exports = mongoose.model('Noodles', schema);
